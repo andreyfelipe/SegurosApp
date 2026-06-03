@@ -1,0 +1,96 @@
+@model SegurosApp.Models.Seguro
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Seguro</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="NumeroApolice" class="control-label"></label>
+                <input asp-for="NumeroApolice" class="form-control" />
+                <span asp-validation-for="NumeroApolice" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Tipo" class="control-label"></label>
+                <input asp-for="Tipo" class="form-control" />
+                <span asp-validation-for="Tipo" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Status" class="control-label"></label>
+                <input asp-for="Status" class="form-control" />
+                <span asp-validation-for="Status" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="PremioMensal" class="control-label"></label>
+                <input asp-for="PremioMensal" class="form-control" />
+                <span asp-validation-for="PremioMensal" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ValorSegurado" class="control-label"></label>
+                <input asp-for="ValorSegurado" class="form-control" />
+                <span asp-validation-for="ValorSegurado" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DataInicio" class="control-label"></label>
+                <input asp-for="DataInicio" class="form-control" />
+                <span asp-validation-for="DataInicio" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="DataVencimento" class="control-label"></label>
+                <input asp-for="DataVencimento" class="form-control" />
+                <span asp-validation-for="DataVencimento" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Observacoes" class="control-label"></label>
+                <input asp-for="Observacoes" class="form-control" />
+                <span asp-validation-for="Observacoes" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="SeguradoraId" class="control-label"></label>
+                <input asp-for="SeguradoraId" class="form-control" />
+                <span asp-validation-for="SeguradoraId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Seguradora" class="control-label"></label>
+                <input asp-for="Seguradora" class="form-control" />
+                <span asp-validation-for="Seguradora" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="ClienteId" class="control-label"></label>
+                <input asp-for="ClienteId" class="form-control" />
+                <span asp-validation-for="ClienteId" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Cliente" class="control-label"></label>
+                <input asp-for="Cliente" class="form-control" />
+                <span asp-validation-for="Cliente" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

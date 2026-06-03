@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using SegurosApp.Models;
 
 namespace SegurosApp.Data
 {
@@ -9,5 +10,9 @@ namespace SegurosApp.Data
             : base(options)
         {
         }
+
+        public DbSet<Seguradora> Seguradoras { get; set; }
+        public DbSet<Cliente> Clientes { get; set; }
+        public DbSet<Seguro> Seguros { get; set; }  
     }
 }
