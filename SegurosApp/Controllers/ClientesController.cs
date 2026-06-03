@@ -3,7 +3,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SegurosApp.Models;
 using SegurosApp.Data;
+using Microsoft.AspNetCore.Authorization;
 
+[Authorize]
 public class ClientesController : Controller
 {
     private readonly ApplicationDbContext _context;
@@ -14,7 +16,7 @@ public class ClientesController : Controller
     }
 
     // GET: CLIENTES
-    public async Task<IActionResult> Index()    
+    public async Task<IActionResult> Index()
     {
         return View(await _context.Clientes.ToListAsync());
     }
